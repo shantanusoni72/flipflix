@@ -11,7 +11,6 @@ export default function Signin() {
             <input type="checkbox" /><label style={{fontSize:15, color:"grey"}}>Remember Me &emsp;</label>
             <label style={{color:"grey"}}>&emsp;Need help?</label>
             <br /><br /><br />
-            <label style={{color:"grey", fontSize:15}}>New to Netflix? <a style={{color:"white", fontSize:15}} href="#">Signup now</a></label>
             <label style={{color:"gray",fontSize:13}}>This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.</label>
         </div>
     )
