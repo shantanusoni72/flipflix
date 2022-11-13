@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Openflix
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/75296055/201531060-577f987a-d54d-4e0f-80ac-4594cf9280e1.png)
+![image](https://user-images.githubusercontent.com/75296055/201531101-592e91ec-b01e-4fa5-8705-5dde2decea16.png)
+
 
 ## Available Scripts
 
