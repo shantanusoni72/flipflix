@@ -7,13 +7,13 @@ export default function Shelf(props) {
     const searchMovies = async () => {
         const category = props.category
         if (category === "home" || category === "movies") {
-            const url = "https://api.themoviedb.org/3/movie/popular?api_key=a9230cc5284b56f7030a8068360f3487&language=en-US&page=1"
+            const url = "https://api.themoviedb.org/3/movie/popular?api_key=<api-key>&language=en-US&page=1"
             const response = await fetch(url)
             const data = await response.json()
             setMovieData(data.results)
         } 
         if(category === "tvshows") {
-            const url = "https://api.themoviedb.org/3/tv/popular?api_key=a9230cc5284b56f7030a8068360f3487&language=en-US&page=1"
+            const url = "https://api.themoviedb.org/3/tv/popular?api_key=<api-key>&language=en-US&page=1"
             const response = await fetch(url)
             const data = await response.json()
             setMovieData(data.results)
