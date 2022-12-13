@@ -1,4 +1,5 @@
 import React from 'react'
+import section1 from '../../images/section1.png'
 
 export default function Section1() {
     return (
@@ -10,7 +11,7 @@ export default function Section1() {
                         <h4 className="subTitle">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h4>
                     </div>
                     <div className="col">
-                        <img className="presImg" src="https://firebasestorage.googleapis.com/v0/b/netflix-clone-ae9c2.appspot.com/o/movie-thumb-imgs%2Ftv-img.png?alt=media&token=2d0ef9ac-4944-42a4-9eeb-f6cdb9aa0945" alt="section 1" />
+                        <img className="presImg" src={section1} alt="section 1" />
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import logo from '../images/logo.png'
 
 export default function navbar() {
     return (
@@ -6,7 +7,7 @@ export default function navbar() {
             <div className="row">
                 <div className="col" style={{ textAlign: "left", padding: 0 }}>
                     <div>
-                        <a href="/"><img className="logo" src="https://firebasestorage.googleapis.com/v0/b/netflix-clone-ae9c2.appspot.com/o/logo.png?alt=media&token=3cb9e5c0-543e-4671-94be-98324dbcbbef" alt="logo" /></a>
+                        <a href="/"><img className="logo" src={logo} alt="logo" /></a>
                     </div>
                 </div>
                 <div className="col" style={{ textAlign: "right" }}>

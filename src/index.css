@@ -13,7 +13,7 @@ code {
 }
 
 .App-1 {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/netflix-clone-ae9c2.appspot.com/o/movie-thumb-imgs%2Fcover.png?alt=media&token=5ad75a04-2c92-47fa-8c84-6a1a57cbffd0");
+  background-image: url("./images/background.jpg")
 }
 
 .divider {
@@ -377,6 +377,16 @@ code {
   border-style: none;
 }
 
+#searchTextField {
+  margin-left: 40%;
+  margin-top: 1%;
+  background-color: #ffffff;
+  padding: 5px;
+  border-style: none;
+  border-radius: 20px;
+  border-width: 0px;
+}
+
 @media screen and (max-width: 444px) {
   .email {
     width: 50%;
@@ -494,5 +504,14 @@ code {
     background-color: red;
     color: rgb(255, 255, 255);
     border-style: none;
+  }
+
+  #searchTextField {
+    margin-left: 20%;
+    margin-top: 1%;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 20px;
+    border-width: 0px;
   }
 }

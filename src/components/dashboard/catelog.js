@@ -7,7 +7,7 @@ export default function Catelog(props) {
         <div className='movie'>
             <div>
                 <p>{props.title} ({props.release_date})</p>
-                <img class="ratingImg" src={RatingImage} alt="ratingImage" /><p>{props.vote_average}</p>
+                <img className="ratingImg" src={RatingImage} alt="ratingImage" /><p>{props.vote_average}</p>
                 <p>{props.overview}</p>
             </div>
             <div>
