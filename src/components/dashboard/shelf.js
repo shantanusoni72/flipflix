@@ -9,7 +9,7 @@ const purpose_url = ["/movie/popular", "/tv/popular", "/search/movie", {"action"
                     "drama": "/movie/18/similar", "documentary": "/movie/99/similar", "history": "/movie/36/similar",
                     "music": "/movie/10402/similar"
                     }]
-const param = "?api_key=a9230cc5284b56f7030a8068360f3487&language=en-US&page=1"
+const param = "?api_key=<apiKey>&language=en-US&page=1"
 const query = "&query="
 
 export default function Shelf(props) {
