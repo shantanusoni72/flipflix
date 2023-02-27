@@ -3,10 +3,9 @@ import React from 'react'
 export default function Sub_Footer() {
     return (
         <div className="end">
-            <h5>Ready to watch? Enter your email to create or restart your membership.</h5><br />
-            <div style={{backgroundColor:"black"}}>
-                <input className="email" type="text" placeholder="Enter Address"  />
-                <button className="signin">Get Started!</button>
+            <h5>Ready to watch? Click on the watch button below.</h5><br />
+            <div style={{ backgroundColor: "black" }}>
+                <a className="btn" href="/watch">Watch here</a>
             </div>
             <br />
         </div>
