@@ -2,8 +2,8 @@
 
 https://openflix-tv.netlify.app/
 
-![image](https://user-images.githubusercontent.com/75296055/203555548-3bedd9a8-0887-44e7-8926-a626aca1c355.png)
-![image](https://user-images.githubusercontent.com/75296055/203914370-3424538f-e531-418f-b818-b26a46c96c85.png)
+![image](https://user-images.githubusercontent.com/75296055/221532009-6c11790f-5e66-4a34-b5aa-8cdf11fd452b.png)
+![image](https://user-images.githubusercontent.com/75296055/221532247-cb100351-e5bd-44a5-a90b-60cbe732019f.png)
 
 ## Installation
 1. Clone this repository.
