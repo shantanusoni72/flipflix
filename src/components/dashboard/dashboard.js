@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Shelf from './shelf'
-import Footer from '../footer'
+import Footer from '../Footer'
 
 export default function Dashboard(props) {
     return (

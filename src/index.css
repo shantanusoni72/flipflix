@@ -12,8 +12,11 @@ code {
     monospace;
 }
 
-.App-1 {
-  background-image: url("./images/background.jpg")
+.App-inner {
+  background-image: url("./images/background.jpg");
+  color: white;
+  height: 750px;
+  padding-top: 40px;
 }
 
 .divider {
@@ -108,9 +111,10 @@ code {
 }
 
 .subHeading {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 25px;
+  font-weight: 400;
   color: white;
+  margin: 0%;
 }
 
 .end {
@@ -120,7 +124,8 @@ code {
 }
 
 .footer {
-  color: gray;
+  background-color: rgb(0, 0, 0);
+  color: rgb(236, 236, 236);
   padding: 45px;
   height: auto;
   text-align: center;

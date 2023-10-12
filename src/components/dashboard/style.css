@@ -7,49 +7,132 @@ nav.react-contextmenu {
   background-color: #fff;
   padding: 10px 0;
   z-index: 99;
-  box-shadow: 0 0 20px rgba(0,0,0,.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
 }
-.react-contextmenu .react-contextmenu-item:hover{
-background: #cccccc;
+
+.react-contextmenu .react-contextmenu-item:hover {
+  background: #cccccc;
 }
 
 .react-contextmenu-item:hover:not(.react-contextmenu-item--disabled) {
-background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
-.react-contextmenu .react-contextmenu-item{
-font-size: 14px;
-display: block;
-text-decoration: none;
-padding: 10px 15px;
-cursor: pointer;
-user-select: none;
-transition: .2s;
-position: relative;
-margin-bottom: 2px;
-font-weight: 500;
-display: flex;
-align-items: center;
-outline: none;
+.react-contextmenu .react-contextmenu-item {
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  user-select: none;
+  transition: .2s;
+  position: relative;
+  margin-bottom: 2px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  outline: none;
 }
-.react-contextmenu-item span{
-margin-left: 10px;
+
+.react-contextmenu-item span {
+  margin-left: 10px;
 }
-.react-contextmenu-item svg{
-font-size: 14px;
+
+.react-contextmenu-item svg {
+  font-size: 14px;
 }
-.react-contextmenu-item .copy{
-color:skyblue
+
+.react-contextmenu-item .copy {
+  color: skyblue
 }
-.react-contextmenu-item .delete{
-color:red
+
+.react-contextmenu-item .delete {
+  color: red
 }
-.react-contextmenu-item .send{
-color: blue
+
+.react-contextmenu-item .send {
+  color: blue
 }
-.react-contextmenu-item .share{
-color: green
+
+.react-contextmenu-item .share {
+  color: green
 }
-.react-contextmenu-item .watchlist{
-color: rebeccapurple
+
+.react-contextmenu-item .watchlist {
+  color: rebeccapurple
+}
+
+.people {
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.people img {
+  border-radius: 100%;
+  width: 170px;
+  height: 170px;
+}
+
+.people img:hover {
+  border-radius: 100%;
+  opacity: 0.5;
+}
+
+.people label {
+  color: white;
+  font-size: 20px;
+}
+
+.peopleBoard {
+  width: 80%;
+  display: flex;
+  overflow-x: auto;
+  margin: auto;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header {
+  background-color: black;
+  padding: 18px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(31, 31, 31);
+}
+
+
+
+@media screen and (max-width: 444px) {
+  .people {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .people img {
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+  }
+
+  .people label {
+    color: white;
+    font-size: 20px;
+  }
+
+  .peopleBoard {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding-left: 1%;
+  }
 }

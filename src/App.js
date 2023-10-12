@@ -1,5 +1,5 @@
 import './App.css';
-import Main from './components/main';
+import Main from './components/Main';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/dashboard/dashboard';
 

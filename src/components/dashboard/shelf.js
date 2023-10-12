@@ -2,23 +2,22 @@ import React, { useState, useEffect } from 'react'
 import Catelog from './catelog'
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
-
-const start_url = "https://api.themoviedb.org/3"
-const purpose_url = ["/movie/popular", "/tv/popular", "/search/movie", {"action": "/movie/28/similar", 
-                    "comedy": "/movie/35/similar", "crime": "/movie/85/similar", "romance": "/movie/10749/similar",
-                    "drama": "/movie/18/similar", "documentary": "/movie/99/similar", "history": "/movie/36/similar",
-                    "music": "/movie/10402/similar"
-                    }]
-const param = "?api_key=<apiKey>&language=en-US&page=1"
-const query = "&query="
+import PeopleRack from './people';
+import urls from '../urls'
+import './style.css'
 
 export default function Shelf(props) {
     const [getMovieData, setMovieData] = useState([])
+    const [getPeopleData, setPeopleData] = useState([])
 
-    const search = async (url) => {
+    const search = async (url, purpose) => {
         const response = await fetch(url)
         const data = await response.json()
-        setMovieData(data.results)
+        if(purpose === 'search') {
+            setMovieData(data.results)
+        } else if(purpose === 'people') {
+            setPeopleData(data.results)
+        }
     }
 
     const searchMovies = async () => {
@@ -26,26 +25,32 @@ export default function Shelf(props) {
         var url = ""
 
         if (category === "home" || category === "movies") {
-            url = start_url + purpose_url[0] + param
+            url = urls.start_url + urls.purpose_url[0] + urls.param
         }
         if (category === "tvshows") {
-            url = start_url + purpose_url[1] + param
+            url = urls.start_url + urls.purpose_url[1] + urls.param
         }
-        
-        search(url)
+
+        search(url, 'search')
+    }
+
+    const searchPeople = async () => {
+        const url = urls.start_url + urls.purpose_url[4] + urls.param
+        search(url, 'people')
     }
 
     useEffect(() => {
         setTimeout(() => {
             searchMovies()
+            searchPeople()
         })
     }, [])
 
     const showMoviesFromSearch = async () => {
         const searchTerm = document.getElementById("searchTextField").value
         if (searchTerm !== "") {
-            const url = start_url + purpose_url[2] + param + query + searchTerm
-            search(url)
+            const url = urls.start_url + urls.purpose_url[2] + urls.param + urls.query + searchTerm
+            search(url, 'search')
         }
     }
 
@@ -61,75 +66,18 @@ export default function Shelf(props) {
                     }
                 }} />
             <Stack direction="row" spacing={1} className="chip">
-                <Chip className="chips"
-                      label="Action" 
-                      color="error"
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["action"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips"
-                      label="Comedy" 
-                      color="error"
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["comedy"] + param
-                        search(url)
-                      }} 
-                />
-                <Chip className="chips"
-                      label="Crime"
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["crime"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="Romance" 
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["romance"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="Drama" 
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["drama"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="Documentary" 
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["documentary"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="History" 
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["history"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="Horror" 
-                      color="error" 
-                      onClick={()=>{
-                        const url = start_url + purpose_url[3]["horror"] + param
-                        search(url)
-                      }}
-                />
-                <Chip className="chips" 
-                      label="Music" 
-                      color="error" 
-                      onClick={()=>alert(4)}
-                />
+                {
+                    urls.category.map((key) => (
+                        <Chip className="chips"
+                            label={ key }
+                            color="error"
+                            onClick={() => {
+                                const url = urls.start_url + urls.purpose_url[3][key] + urls.param
+                                search(url, 'search')
+                            }}
+                        />
+                    ))
+                }
             </Stack>
             <div className='movieCard'>
                 {getMovieData.length === 0 ?
@@ -146,6 +94,21 @@ export default function Shelf(props) {
                             overview={movie.overview}
                         />
                     ))}
+            </div>
+            <h3 className="title">People</h3>
+            <div className="peopleBoard">
+                {getPeopleData.length === 0 ?
+                    <h3 style={{ fontSize: 20, color: "white", padding: 30 }}>
+                        No people found :(
+                    </h3>
+                    :
+                    getPeopleData.map((people) => (
+                        <PeopleRack
+                            name={people.name}
+                            image={people.profile_path}
+                        />
+                    ))
+                }
             </div>
         </div>
     )
