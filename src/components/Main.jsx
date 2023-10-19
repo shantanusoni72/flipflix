@@ -1,5 +1,5 @@
 import Carousel from './Carousel';
-import Section from './Section/Section';
+import Section from './Section';
 import Faq from './Faq';
 import SubFooter from './SubFooter';
 import Footer from './Footer'
@@ -13,6 +13,7 @@ export default function Main() {
                 <div className='space'></div>
                 <Carousel />
             </div>
+            <div className="divider" />
             <Section />
             <Faq />
             <SubFooter />

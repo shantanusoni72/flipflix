@@ -64,7 +64,7 @@ export default function Shelf(props) {
                     if (e.key === "Enter") {
                         showMoviesFromSearch()
                     }
-                }} />
+            }} />
             <Stack direction="row" spacing={1} className="chip">
                 {
                     urls.category.map((key) => (

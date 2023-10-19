@@ -19,6 +19,15 @@ code {
   padding-top: 40px;
 }
 
+.navbar {
+  padding: 1%;
+  display: flex;
+}
+
+#btn-navbar {
+  margin-left: 75%;
+}
+
 .divider {
   padding: 4px;
   background-color: rgb(68, 68, 68);
@@ -410,6 +419,10 @@ code {
 
   .heading {
     font-size: 30px;
+  }
+
+  #btn-navbar {
+    margin-left: 55%;
   }
 
   .chip {
