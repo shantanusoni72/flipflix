@@ -1,0 +1,7 @@
+.banner {
+    background-color: rgb(202, 0, 0);
+    color: white;
+    font-size: 14px;
+    padding-block: 10px;
+    padding-inline: 50px;
+}

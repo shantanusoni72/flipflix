@@ -2,10 +2,12 @@ import './App.css';
 import Main from './components/Main';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/dashboard/dashboard';
+import Banner from './components/Banner/banner';
 
 function App() {
   return (
     <div>
+      <Banner />
       <Router>
         <Switch>
           <Route exact path="/" component={ Main } />
