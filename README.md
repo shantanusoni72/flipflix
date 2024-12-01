@@ -1,7 +1,12 @@
-### Openflix frontend
+## Introduction
+This openflix-tv frontend is made possible with HTML, CSS, React and TBDM API for data handling.
 
-In-depth design and development of Netflix-like movie webapp where users can browse, search and see review for movies Made with React.js, MaterialUI and The Movie Database web based RESTful APIs. Link to the project: https://openflix-tv.netlify.app/
+## Live Production Build
+https://openflix-tv.netlify.app/
 
-### Installation
-Clone this repo.
-Install npm and start the server.
+## Gallery
+image image image
+
+## Setup
+1. `npm install`
+2. npm start
