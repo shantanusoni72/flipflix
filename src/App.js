@@ -1,22 +1,18 @@
-import './App.css';
-import Main from './components/Main';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Dashboard from './components/dashboard/dashboard';
-import Banner from './components/Banner/banner';
+import './App.css';
+import Home from './Pages/Home/home';
+import Header from './Components/Header/header';
+import Footer from './Components/Footer/Footer'
 
 function App() {
   return (
-    <div>
-      <Banner />
-      <Router>
-        <Switch>
-          <Route exact path="/" component={ Main } />
-          <Route exact path="/watch" component={() => <Dashboard category="home" />}  />
-          <Route exact path="/watch/tvshows" component={() => <Dashboard category="tvshows" /> } />
-          <Route exact path="/watch/movies" component={() => <Dashboard category="movies" /> } />
-        </Switch>
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

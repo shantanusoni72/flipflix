@@ -1,0 +1,118 @@
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-block: 40px;
+}
+
+.footer {
+    width: 90%;
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-row-1, .footer-row-2, .footer-row-3, .footer-row-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-row-2 li a, .footer-row-3 li a, .footer-row-4 li a {
+    font-size: calc(var(--h5) + 1px);
+    font-weight: var(--fw);
+    color: var(--black);
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.footer-row-2 li a:hover, .footer-row-3 li a:hover, .footer-row-4 li a:hover {
+    color: var(--red);
+}
+
+.footer-row-1 {
+    display: inherit;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+
+.footer-row-1 h3 {
+    font-size: var(--h3);
+    font-weight: var(--fw);
+    color: var(--black);
+}
+
+.footer-row-1 p {
+    font-size: calc(var(--h5) + 1px);
+    font-weight: var(--fw);
+    color: var(--black);
+}
+
+.footer-row-1 img {
+    width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-row-1 {
+        width: 80%;
+        align-items: center;
+    }
+
+    .footer-row-1 img {
+        width: 20%;
+    }
+
+    .footer-row-1 p {
+        text-align: center;
+    }
+
+    .footer-row-2, .footer-row-3, .footer-row-4 {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .footer {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-row-1 {
+        width: 80%;
+        align-items: center;
+    }
+
+    .footer-row-1 h3 {
+        font-size: var(--h4);
+    }
+
+    .footer-row-1 p {
+        font-size: calc(var(--h5) - 2px);
+    }
+
+    .footer-row-1 img {
+        width: 20%;
+    }
+
+    .footer-row-1 p {
+        text-align: center;
+    }
+
+    .footer-row-2, .footer-row-3, .footer-row-4 {
+        width: 40%;
+    }
+
+    .footer-row-2 li a, .footer-row-3 li a, .footer-row-4 li a {
+        font-size: calc(var(--h5) - 2px);
+    }
+}
